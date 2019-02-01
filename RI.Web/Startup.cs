@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using RI.Web.DataContext;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using MediatR;
 
 namespace RI.Web
 {
@@ -56,7 +57,7 @@ namespace RI.Web
                 facebookOptions.AppId = Configuration["Facebook:AppId"];
                 facebookOptions.AppSecret = Configuration["Facebook:AppSecret"];
             });
-
+            services.AddMediatR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
