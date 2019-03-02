@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RI.Web</title>
+    @await Html.PartialAsync("_ValidationStylesPartial.cshtml")
+
+</head>
+<body>
+    @await Html.PartialAsync("_Header.cshtml")
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @await Html.PartialAsync("_Footer.cshtml")
+
+    @await Html.PartialAsync("_ValidationScriptsPartial.cshtml")
+
+    <script src="~/public/bundle.js" asp-append-version="true"></script>
+
+
+</body>
+</html>
