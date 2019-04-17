@@ -18,6 +18,8 @@
 
 
   <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\NewFolder\" />
     <Folder Include="wwwroot\public\" />
   </ItemGroup>
 
